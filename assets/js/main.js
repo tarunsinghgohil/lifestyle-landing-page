@@ -55,4 +55,21 @@
       email.classList.remove('is-invalid');
     }
   });
+
+  // Navbar toggler icon change
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const menuIcon = document.getElementById('menuIcon');
+  const navbarCollapse = document.getElementById('mainNav');
+
+  if (navbarToggler && menuIcon && navbarCollapse) {
+    navbarCollapse.addEventListener('show.bs.collapse', () => {
+      menuIcon.classList.remove('bi-list');
+      menuIcon.classList.add('bi-x-lg');
+    });
+
+    navbarCollapse.addEventListener('hide.bs.collapse', () => {
+      menuIcon.classList.remove('bi-x-lg');
+      menuIcon.classList.add('bi-list');
+    });
+  }
 })();
